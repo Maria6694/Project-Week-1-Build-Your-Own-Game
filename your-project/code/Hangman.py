@@ -11,6 +11,19 @@ limit_attempts=9
 attempts=0
 #increasing, as long as there are guesses
 correct_letters=0
+print("Hello!!! Welcome to the Hangman Game by Maria. The objective of the game is: \n     - Guess the word"
+      
+      "\nThat's the only objective, easy right?"
+      "\nWell, let's see!!! You will have to guess the word from a list of +200 words, ready???"
+      "\nA little, detail: "
+      "\n    · You only have 9 attempts, each time you enter an incorrect letter, you will have 1 attempt left, hurry up and don't hang the poor man :("
+      "\nAfter guessing/failing to guess one word you will be able to guess the word but if you introduce the incorrect word, you lose!!!"
+      "\n"
+      "\nI wish you the best of luck - Maria (Game Designer)"
+      "\n"
+      "---------------------------------"
+      "\n"
+      "\n")
 print(f"The word you have to guess has {len(cpu_chose)} letters")
 #List of word created to transform it into a hashed list (con guiones).
 intro_list = list(cpu_chose)
@@ -74,11 +87,11 @@ def guessletter():
         if p_guess.isalpha():
             return p_guess
         else:
-            print("Sorry I don't understand you, enter another letter")
+            print("Sorry I don't understand you, enter another letter :(")
 #Confirmation of guessing the word
 def guesswordconsent():
     while True:
-        p_guess1=input("Do you want to try to guess the word? Y, N: ")
+        p_guess1=input("\nDo you want to try to guess the word? Y, N: ")
         if p_guess1.isalpha():
             if p_guess1.lower() in ["yes", "y", "si", "sí", "yas", "s"]:
                 p_guess1="yes"
@@ -93,7 +106,7 @@ def guesswordconsent():
 #Try to guess the word
 def guessword():
     while True:
-        p_guess=input("Enter your guess of the word: ")
+        p_guess=input("\nEnter your guess of the word: ")
         p_guess=p_guess.lower()
         if p_guess.isalpha():
             return p_guess
