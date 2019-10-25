@@ -133,7 +133,7 @@ else:
             correct_letters = len(intro_list)
             print("Congrats, you have won!!!!")
         else:
-            attempts = 10
+            attempts == 10
             print("YOU LOSE!!!")
             hangman()
     elif correct_letters==len(intro_list) and attempts <= limit_attempts:
